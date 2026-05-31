@@ -326,6 +326,6 @@ body{
 .terms-label{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:11px;
   color:var(--text-color);
 }
