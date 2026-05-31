@@ -2,46 +2,101 @@ import { useState } from "react";
 
 function Contact() {
 
-  const [name,setName] = useState("");
-  const [email,setEmail] = useState("");
-  const [product,setProduct] = useState("");
-  const [quantity,setQuantity] = useState("");
-  const [terms,setTerms] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [product, setProduct] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [terms, setTerms] = useState(false);
+
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [productError, setProductError] = useState("");
+  const [quantityError, setQuantityError] = useState("");
+  const [termsError, setTermsError] = useState("");
+
+  const validateName = (value) => {
+    setName(value);
+
+    if (value.trim().length < 3) {
+      setNameError("El nombre debe tener al menos 3 caracteres.");
+    } else {
+      setNameError("");
+    }
+  };
+
+  const validateEmail = (value) => {
+    setEmail(value);
+
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!regex.test(value)) {
+      setEmailError("Ingrese un correo válido.");
+    } else {
+      setEmailError("");
+    }
+  };
+
+  const validateProduct = (value) => {
+    setProduct(value);
+
+    if (value === "") {
+      setProductError("Seleccione un producto.");
+    } else {
+      setProductError("");
+    }
+  };
+
+  const validateQuantity = (value) => {
+    setQuantity(value);
+
+    if (value <= 0 || value === "") {
+      setQuantityError("La cantidad debe ser mayor a 0.");
+    } else {
+      setQuantityError("");
+    }
+  };
+
+  const validateTerms = (checked) => {
+    setTerms(checked);
+
+    if (!checked) {
+      setTermsError("Debe aceptar los términos y condiciones.");
+    } else {
+      setTermsError("");
+    }
+  };
 
   const handleSubmit = (e) => {
 
     e.preventDefault();
 
-    if(name.trim().length < 3){
-      alert("Ingrese un nombre válido");
-      return;
-    }
+    if (
+      nameError ||
+      emailError ||
+      productError ||
+      quantityError ||
+      termsError ||
+      !name ||
+      !email ||
+      !product ||
+      !quantity ||
+      !terms
+    ) {
 
-    if(!email.includes("@")){
-      alert("Ingrese un correo válido");
-      return;
-    }
-
-    if(product === ""){
-      alert("Seleccione un producto");
-      return;
-    }
-
-    if(quantity <= 0){
-      alert("Ingrese una cantidad válida");
-      return;
-    }
-
-    if(!terms){
       alert(
-        "Debe aceptar los términos y condiciones"
+        "Por favor corrija los errores antes de enviar."
       );
+
       return;
     }
 
-    alert(
-      "Pedido enviado correctamente"
-    );
+    alert("Pedido enviado correctamente.");
+
+    setName("");
+    setEmail("");
+    setProduct("");
+    setQuantity("");
+    setTerms(false);
   };
 
   return (
@@ -56,28 +111,50 @@ function Contact() {
 
         <input
           type="text"
-          placeholder="Nombre"
+          placeholder="Nombre completo"
           value={name}
-          onChange={(e)=>
-            setName(e.target.value)
+          onChange={(e) =>
+            validateName(e.target.value)
+          }
+          className={
+            nameError ? "input-error" : ""
           }
         />
+
+        {nameError && (
+          <span className="error">
+            {nameError}
+          </span>
+        )}
 
         <input
           type="email"
-          placeholder="Correo"
+          placeholder="Correo electrónico"
           value={email}
-          onChange={(e)=>
-            setEmail(e.target.value)
+          onChange={(e) =>
+            validateEmail(e.target.value)
+          }
+          className={
+            emailError ? "input-error" : ""
           }
         />
 
+        {emailError && (
+          <span className="error">
+            {emailError}
+          </span>
+        )}
+
         <select
           value={product}
-          onChange={(e)=>
-            setProduct(e.target.value)
+          onChange={(e) =>
+            validateProduct(e.target.value)
+          }
+          className={
+            productError ? "input-error" : ""
           }
         >
+
           <option value="">
             Seleccione un producto
           </option>
@@ -97,30 +174,54 @@ function Contact() {
           <option>
             Juego de Destornilladores
           </option>
+
         </select>
+
+        {productError && (
+          <span className="error">
+            {productError}
+          </span>
+        )}
 
         <input
           type="number"
           placeholder="Cantidad"
           value={quantity}
-          onChange={(e)=>
-            setQuantity(e.target.value)
+          onChange={(e) =>
+            validateQuantity(e.target.value)
+          }
+          className={
+            quantityError ? "input-error" : ""
           }
         />
 
-        <label>
+        {quantityError && (
+          <span className="error">
+            {quantityError}
+          </span>
+        )}
+
+        <label className="terms-label">
 
           <input
             type="checkbox"
             checked={terms}
-            onChange={(e)=>
-              setTerms(e.target.checked)
+            onChange={(e) =>
+              validateTerms(
+                e.target.checked
+              )
             }
           />
 
-          Acepto términos y condiciones
+          Acepto los términos y condiciones
 
         </label>
+
+        {termsError && (
+          <span className="error">
+            {termsError}
+          </span>
+        )}
 
         <button type="submit">
           Enviar Pedido

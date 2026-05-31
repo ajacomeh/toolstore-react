@@ -311,3 +311,21 @@ body{
   }
 
 }
+
+.error{
+  color:#ff6b6b;
+  font-size:0.9rem;
+  margin-top:-10px;
+  margin-bottom:5px;
+}
+
+.input-error{
+  border:1px solid #ff6b6b !important;
+}
+
+.terms-label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--text-color);
+}
