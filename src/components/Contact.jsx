@@ -30,7 +30,7 @@ function Contact() {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!regex.test(value)) {
-      setEmailError("Ingrese un correo válido.");
+      setEmailError("Ingrese un correo con formato usuario@dominio.com");
     } else {
       setEmailError("");
     }
