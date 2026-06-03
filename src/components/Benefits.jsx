@@ -17,7 +17,7 @@ function Benefits() {
     },
     {
       icon: <FaTools />,
-      text: "Soporte técnico"
+      text: "Asistencia técnica especializada"
     }
   ];
 
