@@ -1,4 +1,4 @@
-# Etapa de construcción
+# Etapa de construcciÃ³n
 FROM node:20 AS build
 WORKDIR /app
 COPY package*.json ./
@@ -6,7 +6,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Etapa de producción
+# Etapa de producciÃ³n
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
