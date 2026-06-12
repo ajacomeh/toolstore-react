@@ -15,7 +15,7 @@ function Hero() {
 
         <a href="#products">
           <button>
-            Ver Catálogo
+            Dirigirse a Catálogo
           </button>
         </a>
 
