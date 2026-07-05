@@ -430,33 +430,69 @@ p{
 
 }
 
-.benefits .cards{
+.benefit-container{
 
-    margin-top:45px;
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
 
 }
 
-.benefits .card{
+.benefit-card{
 
-    text-align:center;
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
 
     padding:35px;
 
-}
+    text-align:center;
 
-.benefits .card span{
+    box-shadow:var(--shadow);
 
-    display:block;
-
-    font-size:58px;
-
-    margin-bottom:18px;
+    transition:var(--transition);
 
 }
 
-.benefits .card h3{
+.benefit-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+}
+
+.benefit-card .icon{
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.benefit-card h3{
+
+    color:white;
 
     margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.benefit-card p{
+
+    color:var(--text-secondary);
+
+    line-height:1.6;
 
 }
 
