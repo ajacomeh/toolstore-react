@@ -15,23 +15,14 @@ function App() {
   return (
     <>
       <Navbar />
-
       <Hero />
-
       <Products />
-
       <Benefits />
-
       <BestSellers />
-
       <Statistics />
-
       <Testimonials />
-
       <FAQ />
-
       <Contact />
-
       <Footer />
     </>
   );
