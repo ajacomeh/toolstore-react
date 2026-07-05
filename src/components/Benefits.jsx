@@ -23,7 +23,7 @@ function Benefits() {
 
   return (
     <section
-      id="benefits"
+      id="beneficios"
       className="benefits"
     >
 

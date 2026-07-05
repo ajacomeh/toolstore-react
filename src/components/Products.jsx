@@ -27,7 +27,7 @@ function Products() {
   ];
 
   return (
-    <section id="products" className="products">
+    <section id="productos" className="products">
 
       <h2>Herramientas Destacadas</h2>
 

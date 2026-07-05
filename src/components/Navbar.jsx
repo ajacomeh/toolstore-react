@@ -1,25 +1,37 @@
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2>ToolStore</h2>
+
+      <h2>🛠 ToolStore PRO</h2>
 
       <ul>
+
         <li>
-          <a href="#hero">Inicio</a>
+          <a href="#inicio">Inicio</a>
         </li>
 
         <li>
-          <a href="#products">Productos</a>
+          <a href="#productos">Productos</a>
         </li>
 
         <li>
-          <a href="#benefits">Beneficios</a>
+          <a href="#beneficios">Beneficios</a>
         </li>
 
         <li>
-          <a href="#contact">Pedido</a>
+          <a href="#opiniones">Opiniones</a>
         </li>
+
+        <li>
+          <a href="#faq">FAQ</a>
+        </li>
+
+        <li>
+          <a href="#pedido">Pedido</a>
+        </li>
+
       </ul>
+
     </nav>
   );
 }

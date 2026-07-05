@@ -1,63 +1,129 @@
-# ToolStore React
+# 🛠 ToolStore PRO - React
 
-## Integrantes
+Landing Page desarrollada en React utilizando Vite como herramienta de construcción.
 
-- Aaron Jacome (Líder de Proyecto y Documentador)
-- Jeremy Robles (Desarrollador Frontend)
-- Ricardo Coque (Desarrollador Backend)
-- Jacobo Chimbolema (Operaciones y Despliegue)
+## 📖 Descripción
 
-## Descripción
+ToolStore PRO es una Landing Page moderna para una tienda de herramientas profesionales.
 
-ToolStore es una landing page desarrollada con React y Vite para la promoción de herramientas de construcción y bricolaje.
-
-## Tecnologías utilizadas
+El proyecto fue desarrollado con fines académicos para demostrar el uso de:
 
 - React
+- Componentes reutilizables
+- CSS moderno
+- Gestión de versiones con GitHub
+- Docker
+- GitHub Actions
+- Despliegue continuo con Vercel
+
+---
+
+# 🚀 Tecnologías utilizadas
+
+- React 19
 - Vite
 - JavaScript
-- CSS
+- CSS3
+- HTML5
+- Git
 - GitHub
 - Docker
+- GitHub Actions
 - Vercel
 
-## Funcionalidades
+---
 
-- Navegación entre secciones
-- Diseño responsive
-- Catálogo de herramientas
-- Beneficios destacados
-- Formulario de pedidos
-- Validaciones en tiempo real
+# 📂 Estructura del proyecto
 
-## Ejecución local
+```
+src
+│
+├── components
+│      Navbar.jsx
+│      Hero.jsx
+│      Products.jsx
+│      Benefits.jsx
+│      BestSellers.jsx
+│      Statistics.jsx
+│      Testimonials.jsx
+│      FAQ.jsx
+│      Contact.jsx
+│      Footer.jsx
+│
+├── App.jsx
+├── main.jsx
+├── styles.css
+```
 
-### Clonar repositorio
+---
 
+# ▶ Ejecutar localmente
+
+Clonar el repositorio
+
+```bash
 git clone https://github.com/ajacomeh/toolstore-react.git
+```
 
-### Instalar dependencias
+Entrar al proyecto
 
+```bash
+cd toolstore-react
+```
+
+Instalar dependencias
+
+```bash
 npm install
+```
 
-### Ejecutar proyecto
+Ejecutar
 
+```bash
 npm run dev
+```
 
-## Despliegue
+---
 
-https://toolstore-react.vercel.app
+# 🐳 Docker
 
-## Docker
+Construir imagen
 
-### Construir imagen
-
+```bash
 docker build -t toolstore-react .
+```
 
-### Ejecutar contenedor
+Ejecutar contenedor
 
+```bash
 docker run -d -p 8080:80 --name toolstore-container toolstore-react
+```
 
-### Abrir aplicación
+Abrir
 
+```
 http://localhost:8080
+```
+
+---
+
+# 🌐 Despliegue
+
+Aplicación desplegada en:
+
+https://toolstore-react.vercel.app/
+
+---
+
+# 👥 Integrantes
+
+- Aaron Jacome
+- Jeremy Robles
+- Ricardo Coque
+- Jacobo Chimbolema
+
+---
+
+# 📄 Licencia
+
+Proyecto académico.

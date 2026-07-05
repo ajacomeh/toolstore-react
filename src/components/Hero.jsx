@@ -1,28 +1,62 @@
 function Hero() {
-  return (
-    <section id="hero" className="hero">
 
-      <div className="hero-content">
+    return (
 
-        <h1>
-          Las mejores herramientas para tus proyectos
-        </h1>
+        <section
+            className="hero"
+            id="inicio"
+        >
 
-        <p>
-          Calidad profesional para construcción,
-          carpintería y bricolaje.
-        </p>
+            <div className="overlay">
 
-        <a href="#products">
-          <button>
-            Dirigirse a Catálogo
-          </button>
-        </a>
+                <span className="version">
 
-      </div>
+                    🚀 NUEVA VERSIÓN 2.0
 
-    </section>
-  );
+                </span>
+
+                <h1>
+
+                    ToolStore PRO
+
+                </h1>
+
+                <p>
+
+                    Todo lo que necesitas para tus proyectos de construcción,
+                    carpintería, electricidad y mantenimiento, con productos de
+                    las mejores marcas del mercado.
+
+                </p>
+
+                <div className="hero-buttons">
+
+                    <a
+                        href="#productos"
+                        className="btn-primary"
+                    >
+
+                        Ver Catálogo
+
+                    </a>
+
+                    <a
+                        href="#"
+                        className="btn-secondary"
+                    >
+
+                        Descargar Catálogo
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    );
+
 }
 
 export default Hero;

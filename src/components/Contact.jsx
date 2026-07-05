@@ -101,8 +101,8 @@ function Contact() {
 
   return (
     <section
-      id="contact"
       className="contact"
+      id="pedido"
     >
 
       <h2>Realizar Pedido</h2>
