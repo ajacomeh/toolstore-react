@@ -17,7 +17,7 @@ function Hero() {
 
                 <h1>
 
-                    ToolStore PRO
+                    ToolStore PRO v2
 
                 </h1>
 
