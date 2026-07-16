@@ -11,7 +11,7 @@ function Hero() {
 
                 <span className="version">
 
-                    🚀 NUEVA VERSIÓN 2.0
+                    🚀 NUEVA VERSIÓN
 
                 </span>
 
