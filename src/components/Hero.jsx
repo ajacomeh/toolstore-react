@@ -10,15 +10,11 @@ function Hero() {
             <div className="overlay">
 
                 <span className="version">
-
                     🚀 NUEVA VERSIÓN 2.0
-
                 </span>
 
                 <h1>
-
                     ToolStore PRO
-
                 </h1>
 
                 <p>
