@@ -2,7 +2,7 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-      <h2>🛠 ToolStore PRO</h2>
+      <h2>🛠 AMAZON PRO</h2>
 
       <ul>
 

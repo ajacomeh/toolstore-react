@@ -10,7 +10,7 @@ function Hero() {
                 </span>
 
                 <h1>
-                    ToolStore PRO
+                    AMAZON PRO
                 </h1>
 
                 <p>
